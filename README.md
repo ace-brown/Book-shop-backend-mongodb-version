@@ -1,15 +1,15 @@
-# Backend Bookshop (SQL version)
+# Backend Bookshop Webpage (MongoDB)
 
-This is a small backend bookshop webpage built using Node.js, EJS view engine, and MySQL database. The webpage allows you to perform various operations such as adding a book, deleting a book, editing book details, and viewing all the books in the inventory.
+This is a small backend bookshop webpage built using Node.js, EJS view engine, and MongoDB database. The webpage allows you to perform various operations such as adding a book, deleting a book, editing book details, and viewing all the books in the inventory.
 
-![Alt Text](./online-shop.png)
+['alt text'](./online-shop.png)
 
 ## Prerequisites
 
 Before running the application, make sure you have the following installed on your system:
 
 - Node.js: [Download Node.js](https://nodejs.org)
-- MySQL: [Download MySQL](https://www.mysql.com/)
+- MongoDB: [Download MongoDB](https://www.mongodb.com/try/download/community)
 
 ## Getting Started
 
@@ -26,23 +26,20 @@ cd backend-bookshop-webpage
 npm install
 ```
 
-3. Configure MySQL database.
+3. Start MongoDB:
 
+Make sure MongoDB is running on your system. If you installed MongoDB using the default settings, you should be able to start it by running the `mongod` command in your terminal.
 
-
-4. Set up environment variables.
+4. Set up Environment Variables:
 
    - Create a new file named `.env` in the root of the project.
    - Add the following environment variables in the `.env` file:
 
 ```env
-DB_HOST=your-mysql-host
-DB_USER=your-mysql-username
-DB_PASSWORD=your-mysql-password
-DB_DATABASE=your-mysql-database
+MONGODB_URI=mongodb://localhost:27017/bookshop
 ```
 
-Replace `your-mysql-host`, `your-mysql-username`, `your-mysql-password`, and `your-mysql-database` with your actual MySQL database credentials.
+Replace `mongodb://localhost:27017/bookshop` with the connection URI for your MongoDB database. The URI should include the host, port, and the name of the database you want to use.
 
 5. Start the application.
 
@@ -66,6 +63,4 @@ npm start
 
 - Node.js: JavaScript runtime for server-side development.
 - EJS View Engine: Embedded JavaScript templates for rendering dynamic content.
-- MySQL: Relational database management system for data storage.
-
-
+- MongoDB: NoSQL database for data storage.
